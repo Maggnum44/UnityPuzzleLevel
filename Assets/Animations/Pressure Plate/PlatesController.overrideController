@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlatesController
+  m_Controller: {fileID: 9100000, guid: aed5d4d85a6bc674282fec31c3a037b9, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 832e9838d6b8e2641ab193ee07ef34d0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 966dc3f8648335947856abb76e9cb398, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ace66c1bf416bc6428c19067a2dfd403, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a4511f3002897f94885368428ff027af, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bbff62dd4de8fbb46b362a9793e061fc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 69470fd3dbe2377409ace9e42ab7fe11, type: 2}
