@@ -1,6 +1,8 @@
 using Gameplay.Systems;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.TextCore.Text;
+using UnityEngine.UIElements;
 
 
 public class CharacterHabilities : MonoBehaviour
@@ -11,8 +13,20 @@ public class CharacterHabilities : MonoBehaviour
    [SerializeField] private Collider _basicAttackCollider;
 
    public float damage = 30f;
-   public void Attack()
+    private bool habilitiesEnabled = true;
+
+public void SetHabilitiesEnabled(bool enabled)
+        {
+            habilitiesEnabled = enabled;
+        }
+    public void Attack()
     {
+        //Si está muerto que no pueda atacar
+        if (!habilitiesEnabled)
+            {
+               return;
+            }
+        
         OnAttack?.Invoke();
         //Debug.Log("[CharacterHabilities] Attack triggered");
     }
@@ -20,6 +34,7 @@ public class CharacterHabilities : MonoBehaviour
     //Això ho fa el animator
     public void HurtDamageables()
     {
+
         //miro quins damageables estan dins del trigger i els faig mal els que toqui
         var damageablesFound = Physics.OverlapBox(_basicAttackCollider.bounds.center, _basicAttackCollider.bounds.extents, _basicAttackCollider.transform.rotation);
 

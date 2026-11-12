@@ -8,6 +8,8 @@ public class DeathBehaviour : MonoBehaviour
 {
     Damageable _damageable;
 
+    
+
     void Awake()
     {
         _damageable = GetComponent<Damageable>();
@@ -31,6 +33,12 @@ public class DeathBehaviour : MonoBehaviour
         if (interactor != null)
         {
             interactor.SetInteractionEnabled(false);
+        }
+
+        CharacterHabilities habilities = GetComponent<CharacterHabilities>();
+        if (habilities != null)
+        {
+            habilities.SetHabilitiesEnabled(false);
         }
 
     }
